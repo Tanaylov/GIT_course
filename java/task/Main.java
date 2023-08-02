@@ -15,6 +15,27 @@ public class Main{
         }
         input.close();
         System.out.println("arr = " + Arrays.toString(arr));
+        removeEvenNumbers(arr);
+    }
+
+    public static void removeEvenNumbers(int[] array){
+        int count = 0;
+        for (int el : array) {
+            if (el % 2 == 0) count += 1;
+        }
+        if (count == 0) System.out.println("array = " + Arrays.toString(array));
+        else{
+            int[] newArr = new int[array.length - count];
+            int i2 = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] % 2 != 0){
+                    newArr[i2] = array[i];
+                    i2 += 1;
+                }
+            }
+            System.out.println("newArr = " + Arrays.toString(newArr));
+        }
+
     }
     
 }
