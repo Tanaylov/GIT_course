@@ -18,6 +18,10 @@ public class Main{
         removeEvenNumbers(arr);
     }
 
+    /**
+     * @apiNote функция принимает произвольный список целых чисел, на основе его создает список нечётных чисел и выводит его на экран.
+     * @param array
+     */
     public static void removeEvenNumbers(int[] array){
         int count = 0;
         for (int el : array) {
